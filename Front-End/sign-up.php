@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include "header.php";
     if(isset($_SESSION['err'])){
         if($_SESSION['err'] != ""){
             echo $_SESSION['err'];
@@ -7,9 +7,9 @@
     }
 ?>
 
-<form id="user_create_form" action="../Back-End/create_user.php" method="post">
-    <input id="user" type="text" name="username"  required> <!-- oninput="TextChange()" -->
-    <input type="password" name="password" required>
+<form id="user_create_form" action="create_user.php" method="post">
+    Username: <input id="user" type="text" name="username"  required><br /> <!-- oninput="TextChange()" -->
+    Password: <input type="password" name="password" required><br />
     <input type="submit" value="Create!">
 </form>
 <!-- <p id="tag"></p>

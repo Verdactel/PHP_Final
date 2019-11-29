@@ -37,6 +37,6 @@
     Password: <input type="password" name="password" required><br />
     <input type="submit" value="Login">
 </form>
-or <a href="sign-up">Sign Up</a>
+or <a href="sign-up.php">Sign Up</a>
 
 <?php include "footer.php" ?>

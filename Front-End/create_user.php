@@ -18,10 +18,10 @@
         $mysqli->query($query);
 
         //auto-login
-        header("Location: ../Front-End");
+        header("Location: index.php");
     }
     else{
-        $_SESSION['err'] = "Invalid Username";
-        header("Location: ../Front-End/create_user.php");
+        $_SESSION['err'] = "That username is already taken.";
+        header("Location: sign-up.php");
     }
 ?>
