@@ -6,3 +6,4 @@
         echo "Hello ".$_SESSION["username"];
     }
 ?>
+<script src="index.js"></script>
