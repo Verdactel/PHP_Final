@@ -6,8 +6,3 @@
         echo "Hello ".$_SESSION["username"];
     }
 ?>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-<script src="index.js"></script>
