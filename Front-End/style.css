@@ -17,6 +17,9 @@ ul {
     top: 0;
     width: 100%;
 }
+.navbar{
+  z-index: 5;
+}
   
 li {
   float: left;
@@ -51,14 +54,13 @@ li a:hover:not(.active) {
 }
 
 .news_card{
-  z-index: -1;
   margin: 30px;
+  margin-left: 40px;
   width: 20%;
   height: 200px;
   border: 1px solid black;
   background-color: lightgrey;
   border-radius: 5px;
-  background-image: url("https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2019/12/0/0/AP19330785493641.jpg?ve=1&tl=1");
   background-size: cover;
   position: relative; 
 }

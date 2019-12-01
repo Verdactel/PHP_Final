@@ -9,12 +9,12 @@
     }
     else{
         //default display
-    }
-?>
-
-<?php
-    for($i = 0; $i < 5; $i++){
-        echo "<div class='news_card'><div class='title'>This is a card</div></div>";
+        // $response = file_get_contents('https://newsapi.org/v2/top-headlines?country=us&apiKey=c1bffb35cf8d439fa9cd84b0c4d535e6');
+        // $data = json_decode($response);
+//check for null image first
+        // foreach($data->articles as $articles){
+        //     echo '<a style="background-image: url('.$articles->urlToImage.');" title="'.$articles->description.'" href="'.$articles->url.'" class="news_card"><div class="title">'.$articles->title.'</div></a>';
+        // }
     }
 ?>
 
