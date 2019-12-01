@@ -9,6 +9,8 @@
     }
     else{
         //default display
+//generate search bars if necessary
+
         // $response = file_get_contents('https://newsapi.org/v2/top-headlines?country=us&apiKey=c1bffb35cf8d439fa9cd84b0c4d535e6');
         // $data = json_decode($response);
 //check for null image first
