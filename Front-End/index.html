@@ -7,25 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World!
+    <!-- Hello World!
     <button onclick="getLocation()">Try It</button>
     <p id="demo"></p>
+     -->
 
-    <script>
-        var x = document.getElementById("demo");
+    <table id="newsWidgets">
+        <tr>
+            <th>Title</th>
+            <th>Source</th>
+        </tr>
 
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else { 
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
+    </table>
 
-        function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
