@@ -7,21 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World!
+    <!-- Hello World!
     <button onclick="getLocation()">Try It</button>
     <p id="demo"></p>
-    
-    <!-- https://newsapi.org/docs/endpoints/sources -->
-    <script>
-       var url = 'https://newsapi.org/v2/top-headlines?' +
-          'category=health&' +
-          'country=us&' +
-          'apiKey=c1bffb35cf8d439fa9cd84b0c4d535e6';
-        var req = new Request(url);
-        fetch(req)
-            .then(function(response) {
-                console.log(response.json());
-            })
-    </script>
+     -->
+
+    <table id="newsWidgets">
+        <tr>
+            <th>Title</th>
+            <th>Source</th>
+        </tr>
+
+    </table>
+
+    <script src="index.js"></script>
 </body>
 </html>
