@@ -32,11 +32,13 @@
     }
 ?>
 
-<form action="" method="post">
-    Username: <input type="text" name="username" required><br />
-    Password: <input type="password" name="password" required><br />
-    <input type="submit" value="Login">
-</form>
-or <a href="sign-up.php">Sign Up</a>
+<div class="form_container">
+    <form class="login_form" action="" method="post">
+        <label class="username">Username: </label> <input type="text" name="username" required><br />
+        <label class="password">Password: </label> <input type="password" name="password" required><br />
+        <input type="submit" value="Login">
+    </form>
+    <label class="signup_label">Don't have an account? </label><a class="signup_anchor" href="sign-up.php">Sign up here</a>
+</div>
 
 <?php include "footer.php" ?>

@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <ul class="navbar">
+    <ul id="navbar" class="navbar">
         <li><a id="news" href="index.php">News</a></li>
         <?php
             if(isset($_SESSION['userID'])){
@@ -23,6 +23,7 @@
             }
             ?>
         <li class="weather"><a id="weather" href="weather.php">Weather</a></li>
+        <!-- append as child -->
     </ul>
     <script src="setActive.js"></script>
     <div id="content" class="content">
