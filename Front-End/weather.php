@@ -6,8 +6,10 @@
     }
     else{
         //default display
-        // $response = file_get_contents('https://newsapi.org/v2/top-headlines?country=us&apiKey=c1bffb35cf8d439fa9cd84b0c4d535e6');
-        // $data = json_decode($response);
+        $response = file_get_contents('https://community-open-weather-map.p.rapidapi.com/weather?q=salt%20lake%20city');
+        $data = json_decode($response);
+
+        echo $data->weather;
     }
 ?>
 <button onclick="getLocation()">Try It</button>
