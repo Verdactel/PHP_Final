@@ -14,7 +14,6 @@
 <body>
     <ul class="navbar">
         <li><a id="news" href="index.php">News</a></li>
-        <li><a id="weather" href="weather.php">Weather</a></li>
         <?php
             if(isset($_SESSION['userID'])){
                 echo "<li class='login'><a id='login' href='logout.php'>Logout</a></li>";
@@ -22,7 +21,8 @@
             else{
                 echo "<li class='login'><a id='login' href='login.php'>Login / Sign Up</a></li>";
             }
-        ?>
+            ?>
+        <li class="weather"><a id="weather" href="weather.php">Weather</a></li>
     </ul>
     <script src="setActive.js"></script>
-    <div class="content">
+    <div id="content" class="content">
