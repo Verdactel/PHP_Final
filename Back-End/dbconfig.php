@@ -14,7 +14,7 @@ if(mysqli_connect_errno()){
     echo "Fatal error: Could not connect to sql database.";
     exit;
 }else{
-    echo "Connection successful";
+    //echo "Connection successful";
 }
 
 ?>

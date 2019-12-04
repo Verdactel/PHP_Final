@@ -7,26 +7,29 @@
     }
 ?>
 
-<form id="user_create_form" action="create_user.php" method="post">
-    Username: <input id="user" type="text" name="username"  required><br /> <!-- oninput="TextChange()" -->
-    Password: <input type="password" name="password" required><br />
-    <div>
-        Select your favorite news categories<br/>
+<div class="form_container">
+    <form id="login_form" class="login_form" action="create_user.php" method="post">
+        <label class="username">Username: <label><input id="user" type="text" name="username"  required><br /> <!-- oninput="TextChange()" -->
+        <label class="password">Password: <label><input type="password" name="password" required><br />
+        <div>
+            Select your favorite news categories<br/><br />
 
-        <input name="sports_cb" type="hidden" value="0"><br/>
-        Sports<input name="sports_cb" type="checkbox" value="1"><br/>
+            <input name="sports_cb" type="hidden" value="0">
+            <label class="checkbox">Sports</label><input name="sports_cb" type="checkbox" value="1">
 
-        <input name="entertainment_cb" type="hidden" value="0"><br/>
-        Entertainment<input name="entertainment_cb" type="checkbox" value="1"><br/>
-        
-        <input name="general_cb" type="hidden" value="0"><br/>
-        General News<input name="general_cb" type="checkbox" value="1"><br/>
+            <input name="entertainment_cb" type="hidden" value="0">
+            <label class="checkbox">Entertainment</label><input name="entertainment_cb" type="checkbox" value="1">
+            
+            <input name="general_cb" type="hidden" value="0">
+            <label class="checkbox">General News</label><input name="general_cb" type="checkbox" value="1">
 
-        <input name="technology_cb" type="hidden" value="0"><br/>
-        Technology<input name="technology_cb" type="checkbox" value="1"><br/>
-    </div>
-    <input type="submit" value="Create!">
-</form>
+            <input name="technology_cb" type="hidden" value="0">
+            <label class="checkbox">Technology</label><input name="technology_cb" type="checkbox" value="1">
+        </div>
+        <br />
+        <input type="submit" value="Create!">
+    </form>
+</div>
 <!-- <p id="tag"></p>
 
 <script>
