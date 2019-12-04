@@ -84,7 +84,6 @@
                 }
             }
         }
-    }
 ?>
 
 <?php include "footer.php" ?>
