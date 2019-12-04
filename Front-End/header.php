@@ -23,7 +23,7 @@
                 echo "<li class='login'><a id='login' href='login.php'>Login / Sign Up</a></li>";
             }
             ?>
-        <li class="weather"><a id="weather" href="weather.php">Weather</a></li>
+        <!-- <li class="weather"><a id="weather" href="weather.php">Weather</a></li> -->
         <!-- append as child -->
     </ul>
     <script src="setActive.js"></script>
