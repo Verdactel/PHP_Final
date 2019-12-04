@@ -120,11 +120,11 @@ li a:hover:not(.active) {
   border-radius: 20px;
   background-color: #3D3B3C;
   min-height: 300px;
-  width: 260px;
+  width: 280px;
 }
 
 .login_form{
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .login_form input{
@@ -136,6 +136,13 @@ li a:hover:not(.active) {
   float: left;
   margin-right: .5em;
   color: aliceblue;
+}
+
+.login_form input[type=text]{
+  margin-left: 50px;
+}
+.login_form input[type=password]{
+  margin-left: 50px;
 }
 
 .login_form input[type=submit]{
@@ -156,6 +163,10 @@ li a:hover:not(.active) {
 }
 .signup_anchor{
   color: antiquewhite;
+}
+
+.checkbox{
+  margin-left: 70px;
 }
 
 

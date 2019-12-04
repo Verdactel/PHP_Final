@@ -33,7 +33,7 @@
             $UserID = $USER_ID;
             break;
         }
-        $_SESSION["UserID"] = $UserID;
+        $_SESSION["userID"] = $UserID;
         if($_POST["sports_cb"] == "1"){
             
             $sportsSelected = $_POST["sports_cb"];
