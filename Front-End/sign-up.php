@@ -19,8 +19,8 @@
         <input name="entertainment_cb" type="hidden" value="0"><br/>
         Entertainment<input name="entertainment_cb" type="checkbox" value="1"><br/>
         
-        <input name="politics_cb" type="hidden" value="0"><br/>
-        Politics<input name="politics_cb" type="checkbox" value="1"><br/>
+        <input name="general_cb" type="hidden" value="0"><br/>
+        General News<input name="general_cb" type="checkbox" value="1"><br/>
 
         <input name="technology_cb" type="hidden" value="0"><br/>
         Technology<input name="technology_cb" type="checkbox" value="1"><br/>
