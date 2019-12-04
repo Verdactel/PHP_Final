@@ -1,11 +1,12 @@
 <!-- Database include -->
 
 <?php
+header("Access-Control-Allow-Origin: *");
 
-$host = "localhost";
-$username = "root";
-$password = "";//"MyNewPass";
-$db_name = "php_final";
+$host = "pi-gcourtney";
+$username = "garrett";
+$password = "sqlpass";
+$db_name = "PHP_Final";
 
 $sql_inst = new mysqli($host, $username, $password, $db_name);
 
