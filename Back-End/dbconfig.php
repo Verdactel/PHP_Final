@@ -3,7 +3,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 
-$host = "pi-gcourtney";
+$host = "localhost";
 $username = "garrett";
 $password = "sqlpass";
 $db_name = "PHP_Final";
