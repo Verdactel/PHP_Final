@@ -7,13 +7,26 @@
     }
 ?>
 
-<div class="form_container">
-    <form class="login_form" id="user_create_form" action="create_user.php" method="post">
-        <label class="username">Username: </label><input id="user" type="text" name="username"  required><br /> <!-- oninput="TextChange()" -->
-        <label class="password">Password: </label><input type="password" name="password" required><br />
-        <input type="submit" value="Create!">
-    </form>
-</div>
+<form id="user_create_form" action="create_user.php" method="post">
+    Username: <input id="user" type="text" name="username"  required><br /> <!-- oninput="TextChange()" -->
+    Password: <input type="password" name="password" required><br />
+    <div>
+        Select your favorite news categories<br/>
+
+        <input name="sports_cb" type="hidden" value="0"><br/>
+        Sports<input name="sports_cb" type="checkbox" value="1"><br/>
+
+        <input name="entertainment_cb" type="hidden" value="0"><br/>
+        Entertainment<input name="entertainment_cb" type="checkbox" value="1"><br/>
+        
+        <input name="politics_cb" type="hidden" value="0"><br/>
+        Politics<input name="politics_cb" type="checkbox" value="1"><br/>
+
+        <input name="technology_cb" type="hidden" value="0"><br/>
+        Technology<input name="technology_cb" type="checkbox" value="1"><br/>
+    </div>
+    <input type="submit" value="Create!">
+</form>
 <!-- <p id="tag"></p>
 
 <script>

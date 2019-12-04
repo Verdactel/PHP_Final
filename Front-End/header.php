@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "../Back-End/dbconfig.php";
 ?>
 
 <!DOCTYPE html>
