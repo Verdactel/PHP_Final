@@ -5,7 +5,7 @@
 $host = "localhost";
 $username = "root";
 $password = "MyNewPass";
-$db_name = "";
+$db_name = "php_final";
 
 $sql_inst = new mysqli($host, $username, $password, $db_name);
 

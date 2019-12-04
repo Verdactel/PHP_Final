@@ -6,7 +6,7 @@
     }
 
     function ValidateLogin($user, $pass){
-        include "dbconfig.php";
+        include "../Back-End/dbconfig.php";
         
 
         $query = "select * from users where Username='".$user."'";
