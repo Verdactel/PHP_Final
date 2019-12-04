@@ -8,6 +8,8 @@
     
     if($resultUser == NULL){ // Did not find another username with the one provided in the database
         $_SESSION['err'] = "";
+        $_SESSION["UserName"] = $_POST['username'];
+
         $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $query = "insert into `users` (`Username`, `Password`) VALUES (";
@@ -17,36 +19,44 @@
         $query .= ")";
 
         $sql_inst->query($query);
-
-        $query = "select * from users";
-        $result = $sql_inst->query( $query );
-        $numUsers = $result->num_rows;
         
-        if($_POST["sports_cb"] == "1"){ // 1 in db
+        // Begin saving users selected news favorites
+        // Delete all rows from tables: delete from user_to_newsfavorites
+        $queryForUserID = "SELECT USER_ID FROM users WHERE Username='".$_POST['username']."'";
+        $res = $sql_inst->query( $queryForUserID );
+        $UserID = "";
+        while($row = $res->fetch_assoc()){
+            // Find the first match of the UserID 
+            // (Should be the current one we just created) and break
+            // We dont need to look anymore
+            extract($row);
+            $UserID = $USER_ID;
+            break;
+        }
+        $_SESSION["UserID"] = $UserID;
+        if($_POST["sports_cb"] == "1"){
+            
             $sportsSelected = $_POST["sports_cb"];
-            // If this is checked add a row to user_to_newsfavorites
-            // with numUsers + 1 as 'user_id'
-            // and 1 as 'news_catagory'
-        
-            $curUserIndex = $numUsers + 1;
-            $querySports = "INSERT INTO user_to_newsfavorites (user_id, news_catagory) VALUES (".$curUserIndex.", 1)";
-        
+            $querySports = "INSERT INTO user_to_newsfavorites (user_id, news_category) VALUES (".$UserID.", 1)";
             $sql_inst->query( $querySports );
         }
         
-        if($_POST["entertainment_cb"] == "1"){ // 2 in db
-            $entertainmentSelected = $_POST["sports_cb"];
-            echo $entertainmentSelected;
+        if($_POST["entertainment_cb"] == "1"){
+            $entertainmentSelected = $_POST["entertainment_cb"];
+            $queryEntertainment = "INSERT INTO user_to_newsfavorites (user_id, news_category) VALUES (".$UserID.", 2)";
+            $sql_inst->query( $queryEntertainment );
         }
         
-        if($_POST["politics_cb"] == "1"){ // 3 in db
-            $politicsSelected = $_POST["sports_cb"];
-            echo $politicsSelected;
+        if($_POST["general_cb"] == "1"){ // Change to GENERAL!!!
+            $politicsSelected = $_POST["general_cb"];
+            $queryPolitics = "INSERT INTO user_to_newsfavorites (user_id, news_category) VALUES (".$UserID.", 3)";
+            $sql_inst->query( $queryPolitics );
         }
         
-        if($_POST["technology_cb"] == "1"){ // 4 in db
+        if($_POST["technology_cb"] == "1"){
             $politicsSelected = $_POST["technology_cb"];
-            echo $politicsSelected;
+            $queryTech = "INSERT INTO user_to_newsfavorites (user_id, news_category) VALUES (".$UserID.", 4)";
+            $sql_inst->query( $queryTech );
         }
 
         //auto-login
