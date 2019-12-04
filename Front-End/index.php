@@ -58,8 +58,12 @@
                 extract($row);
                 // echo $_name;
                 $link .= $_name;
+                if($_name == ""){
+                    $link .= "general";
+                }
                 break;
             }
+            
             $link .= "&apiKey=c1bffb35cf8d439fa9cd84b0c4d535e6";
             echo $link;
             $response = file_get_contents($link);
